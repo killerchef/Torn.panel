@@ -47,11 +47,30 @@ const shopItems = [
 
 ```
 
+Each button supports:
+
+id: item ID from the shop
+
+emoji: item icon
+
+label: button text
+
+amount: how many to buy
+
+shoparea: shop source (important for correct routing)
+
+topOffset: vertical position (percentage from top of screen)
 
 ---
 
+## 🛡 License
+MIT License – free to use, modify, distribute.
+Give credit if you fork or reuse.
 
-💡 Author
+
+---
+
+## 💡 Author
 Crafted by Luís Cardoso a.k.a. UnAmigo
 Entrepreneur, cook, and tech automator 🍽💻
 AmigoChef Project (coming soon)
