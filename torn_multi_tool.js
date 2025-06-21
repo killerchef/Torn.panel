@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tools Panel
 // @namespace    https://torn.com/
-// @version      1.o
+// @version      1.0
 // @description  Starter Multi-tools!
 // @author       UnAmigo [3749876]
 // @icon         https://www.torn.com/favicon.ico
