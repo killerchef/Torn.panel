@@ -11,7 +11,7 @@
 (function () {
     'use strict';
 
-    // === Toast visual ao centro do ecrã ===
+    // === Toast centered and timed ===
     function showToast(message, isSuccess = true) {
         const toast = document.createElement('div');
         toast.innerText = message;
@@ -40,7 +40,7 @@
         }, 3000);
     }
 
-    // === Botão flutuante genérico (ex: ataque, perfil, etc.) ===
+    // === Modular button for links (ex: attack, profile, etc.) ===
     function createButton(label, callback, topOffset, id = '') {
         if (id && document.getElementById(id)) return;
         const button = document.createElement('button');
@@ -63,9 +63,9 @@
         document.body.appendChild(button);
     }
 
-    // === Botão modular para compra em loja ===
-    function createShopButton({ id, emoji, label, amount, shoparea, topOffset = 50 }) {
-        const btnId = `shopBtn_${id}_${shoparea}`;
+    // === Modular button for shoing ===
+    function createShopButton({ id, emoji, label, amount, topOffset = 50 }) {
+        const btnId = `shopBtn_${id}_${103}`;
         if (document.getElementById(btnId)) return;
 
         const button = document.createElement('button');
@@ -93,7 +93,7 @@
                     step: 'buyShopItem',
                     ID: id,
                     amount: amount,
-                    shoparea: shoparea
+                    shoparea: 103
                 },
                 success: (str) => {
                     try {
@@ -110,7 +110,7 @@
         document.body.appendChild(button);
     }
 
-    // === Lista de botões utilitários ===
+    // === List for buttons / links ===
     const minID = 1000000;
     const maxID = 2500000;
 
@@ -129,12 +129,11 @@
         window.open('https://oran.pw/baldrstargets/', '_blank');
     }, 38);
 
-    // === Lista configurável de botões de loja ===
+    // === Shoping List / Amout  ===
     const shopItems = [
-        { id: 180, emoji: "🍺", label: "Gimme Beers!", amount: 90, shoparea: 103, topOffset: 42 },
-        { id: 394, emoji: "🧱", label: "Buy Bricks", amount: 10, shoparea: 103, topOffset: 46 },
-        { id: 777, emoji: "💊", label: "Buy Meds", amount: 5, shoparea: 111, topOffset: 50 }
-        // Adiciona mais conforme necessário
+        { id: 180, emoji: "🍺", label: "Gimme Beers!", amount: 90, topOffset: 42 },
+        { id: 394, emoji: "🧱", label: "Buy Bricks", amount: 90, topOffset: 46 },
+        // Add more as necessary
     ];
 
     shopItems.forEach(item => createShopButton(item));
