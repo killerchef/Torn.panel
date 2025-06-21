@@ -2,7 +2,7 @@
 
 A powerful modular userscript for **Torn.com**, adding customizable floating buttons for:
 - Quick actions (Attack, Profile randomizer, Baldrs)
-- Direct shop purchases with toasts (e.g. 🍺 Beers, 🧱 Bricks, 💊 Meds)
+- Direct shop purchases with toasts (e.g. 🍺 Beers, 🧱 Bricks)
 - Visual toast notifications centered on screen
 
 > Built with performance, flexibility, and automation in mind — from a Torn player for Torn players.
