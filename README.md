@@ -1,74 +1,84 @@
-# 🧱 Torn - Shop & Tools Panel (AmigoChef Edition)
+Torn Tools Panel
 
-A powerful modular userscript for **Torn.com**, adding customizable floating buttons for:
-- Quick actions (Attack, Profile randomizer, Baldrs)
-- Direct shop purchases with toasts (e.g. 🍺 Beers, 🧱 Bricks)
-- Visual toast notifications centered on screen
-
-> Built with performance, flexibility, and automation in mind — from a Torn player for Torn players.
+A customizable multi-tools userscript for Torn City, organized by categories with a fixed side panel and toast notifications. Designed to be lightweight, extendable, and easy to configure.
 
 ---
 
-## ⚙️ Features
+Features
 
-- 🧲 Floating action panel (fixed right side of screen)
-- 🛒 Instant item purchases from Bits 'n' Bobs
-- 🧱 Modular configuration via JS object array
-- 🔔 In-screen toast notifications (with emoji & color feedback)
-- ♻️ Prevents duplicate buttons on load
-
----
-
-## 📦 Installation
-
-> Works with [Tampermonkey](https://www.tampermonkey.net/)
-
-### 1. Install Tampermonkey
-Install the browser extension for your browser of choice.
-
-### 2. Create a New Script
-Click `+` in Tampermonkey dashboard.
-
-### 3. Paste the Script
-Copy content from [`torn-shop-buttons.js`](./torn-shop-buttons.js) into the editor and save.
+- Fixed side panel for buttons and quick access items.
+- Navigation buttons for frequently used Torn pages (Travel, Casino, Bounties, etc.).
+- Quick shop buttons with customizable items and quantities.
+- Future category support for faction buttons, alerts, or other tools.
+- Toast notifications for visual feedback on actions.
+- Fully configurable at the top of the script (no need to touch the core logic).
 
 ---
 
-## 🧰 Configuration
+Installation
 
-You can customize buttons in the script:
+1. Install a userscript manager, such as Tampermonkey (https://www.tampermonkey.net/) or Greasemonkey (https://www.greasespot.net/).
+2. Click the Raw button on the script file in this repository or copy the code.
+3. Paste it into a new userscript in your manager and save.
+4. Open Torn City (https://www.torn.com) and the panel should appear on the right side.
 
-```js
-const shopItems = [
-  { id: 180, emoji: "🍺", label: "Gimme Beers!", amount: 90, topOffset: 42 },
-  { id: 999, emoji: "🧱", label: "Buy Bricks", amount: 10, topOffset: 46 },
+---
 
+Configuration
+
+All customization is at the top of the script under CONFIGURATION / CUSTOMIZATION.
+
+Navigation Buttons
+
+const navButtons = [
+    { label: 'Travel', callback: () => { window.location.href = 'https://www.torn.com/page.php?sid=travel'; } },
+    { label: 'Casino', callback: () => { window.location.href = 'https://www.torn.com/casino.php'; } },
 ];
 
-```
+- Comment out buttons to disable them.
+- Add new buttons using the same structure.
 
-Each button supports:
+Quick Shop Items
 
-id: item ID from the shop
+const shopItems = [
+    { id: 180, emoji: "🍺", label: "Gimme Beers!", amount: 95 },
+    { id: 394, emoji: "🧱", label: "Buy Bricks", amount: 95 },
+];
 
-emoji: item icon
+- Set id, emoji, label, and amount.
+- New items can be added easily by extending the array.
 
-label: button text
+Future Category Buttons
 
-amount: how many to buy
+const futureCategoryButtons = [
+    { label: 'Faction Alert', callback: () => { alert('This is a faction alert!'); } },
+    { label: 'Daily Check', callback: () => { console.log('Daily check executed'); showToast('Daily check executed'); } },
+];
 
-topOffset: vertical position (percentage from top of screen)
+- Perfect for alerts, faction buttons, or custom tools.
+- Can be extended freely without touching core logic.
 
 ---
 
-## 🛡 License
-MIT License – free to use, modify, distribute.
-Give credit if you fork or reuse.
+Contributing
 
+1. Fork the repository.
+2. Make changes in your branch.
+3. Create a pull request explaining your additions.
 
 ---
 
-## 💡 Author
-Crafted by Luís Cardoso a.k.a. UnAmigo
-Entrepreneur, cook, and tech automator 🍽💻
-AmigoChef Project (coming soon)
+License
+
+MIT License – feel free to copy, modify, and extend for personal or public use.
+
+---
+
+Screenshots
+
+(Add screenshots if you want to showcase the panel and buttons in Torn City)
+
+---
+
+Author: UnAmigo [3749876]  
+GitHub Repo: https://github.com/killerchef/Torn.panel
