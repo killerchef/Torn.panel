@@ -25,9 +25,9 @@
 
     // --- QUICK SHOP ITEMS ---
     const shopItems = [
-        { id: 180, emoji: "🍺", label: "Gimme Beers!", amount: 95 },
-        { id: 394, emoji: "🧱", label: "Buy Bricks", amount: 95 },
-        { id: 560, emoji: "🧱", label: "Buy Bricks", amount: 95 },
+        { id: 180, emoji: "🍺", label: "Beer!", amount: 95 },
+        { id: 394, emoji: "🧱", label: "Bricks", amount: 95 },
+        { id: 560, emoji: "", label: "Fruitcake", amount: 95 },
     ];
 
     // ---  CATEGORY EXAMPLE (Alerts / Faction buttons) ---
